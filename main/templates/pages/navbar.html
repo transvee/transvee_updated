@@ -1,0 +1,67 @@
+<div class="navbar sticky-top">
+      <a href="{% url 'home'%}"><img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d604623f9316bc092a74f9_Group%201%20(1).png" class="logo"></a>
+      <nav>
+        <ul id="menuList">
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'home-1' %}">Home</a></li>
+          <li><a href="{% url 'home-1' %}">About</a></li>
+          <li><a href="#">Contact</a></li>
+          
+          <li>
+            <a href="{% url 'logout' %}"><h5>Log-Out</h5></a>
+          </li>
+          {% else %}
+          <li><a href="{% url 'login' %}">Home</a></li>
+          <li><a href="{% url 'login' %}">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="{% url 'login' %}"><h5>Login</h5></a>
+          </li>
+          {% endif %}
+        </ul>
+        
+
+      </nav>
+      <div class="nav-btn">
+        <button class="btn-1">API Documentation</button>
+        <a href="https://forms.gle/nm3L8cwHtwoKBFcx6"><button class="btn-2" >Get Quote</button></a>
+      </div>
+      
+
+      <img src="https://w7.pngwing.com/pngs/616/930/png-transparent-hamburger-button-computer-icons-menu-bar-line-thumbnail.png" class="menu-icon" onclick="togglemenu()">
+      
+    </div>
+
+
+
+
+
+
+<!-- 
+            <a  href="#section-home"><h5>Home</h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: purple;" href="{% url 'login' %}"><h5>About</h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: purple;" href="#"><h5>Contacts</h5></a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" style="color: purple;" href="{% url 'logout' %}"><h5>Log-Out</h5></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" style="color: purple;" href="{% url 'login' %}"><h5>Login</h5></a>
+          </li>
+          {% endif %}
+        </ul>
+      </ul>
+      <form class="d-flex" role="search">
+          <button class="btn-1">API Documentation</button>
+
+          <button class="btn btn-outline" ><a href="https://forms.gle/nm3L8cwHtwoKBFcx6" style="color: white;">Get Quote</a></button>
+      </form>
+    </div>
+  </div>
+</nav> -->

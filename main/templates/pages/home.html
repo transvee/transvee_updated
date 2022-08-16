@@ -1,0 +1,363 @@
+{% extends 'pages/base.html'%}
+{% load static%}
+
+
+{% block content%}
+
+	{% block style%}
+  <link rel="stylesheet" type="text/css" href="{% static 'index.css'%}">
+  {% endblock %}
+
+<section id="section-1">
+	<div class="home-container">
+			<div class="text-block-1">
+				<h1><b>Translation of your<br>  content just got easier</b></h1>
+				<h5>Transvee gives you the power to engage better with your<br>  audience...</h5>
+				<div class="section-1-btn">
+						<a href="#section-1">
+							<button type="button" class="btn-start-0" >Get Started</button>
+						</a>
+						<a href="#section-4">
+							<button type="button" class="btn-info-0" >How It Works</button>
+						</a>
+				</div>
+			</div>
+
+				<img style="max-width: 9cm;" src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102.png" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102-p-500.png 500w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102-p-800.png 800w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102-p-1080.png 1080w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102.png 1523w" sizes="(max-width: 479px) 300px, (max-width: 767px) 83vw, (max-width: 991px) 45vw, 450px" alt="" class="image image-4">
+			
+
+	</div>
+</section>
+<hr>
+
+<section id="section-2">
+	<div class="container-2">
+		<div class="text-block-2">
+			<h1><b>Translate your content, scale your reach, engage more, gain traction.</b></h1>
+		</div>
+		<div class="section-2-btn">
+			<a href="#section-3">
+				<button type="button" class="btn-start" >Get Started</button>
+			</a>
+			<a href="#section-4">
+				<button type="button" class="btn-info" >How It Works</button>
+			</a>
+		</div>
+			<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a.jpg" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-500.jpg 500w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-800.jpg 800w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a.jpg 1920w" sizes="(max-width: 767px) 96vw, (max-width: 991px) 95vw, 940px" alt="" class="image-3">
+		<hr>
+	</div>
+</section>
+
+<section id="section-3">
+	<div class="demo"><u><h3>Try Demo</h3></u></div>
+	<div class="container-3">
+		<div class="row">
+	  <div class="col-sm-6">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">Translated From:</h5>
+	        <hr>
+	        <p class="card-text" >
+	        	<select id="Select-Language" name="Select-Language" data-name="Select Language" class="select-field w-select">
+	        		<option value="First">Yoruba</option>
+	        		<option value="Second">Igbo</option>
+	        		<option value="Third">Hausa</option>
+	        		<option value="Another option">English</option>
+	        	</select>
+	        		<label for="Select-Language" class="field-label"></label>
+	        	</p>
+	        	<textarea class="textarea-1"></textarea>
+	        	<br><br>
+	        	{% if user.is_authenticated%}
+	        		<a href="{% url 'home-1' %}" class="btn btn-primary">Try It</a>
+	        	{% else %}
+	        		<a href="{% url 'login' %}" class="btn btn-primary">Try It</a>
+	        	{% endif %}
+
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="col-sm-6">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">Translated To:</h5>
+	        <hr>
+	        <p class="card-text" >
+	        	<select id="Select-Language-2" name="Select-Language-2" data-name="Select Language 2" class="select-field ">
+	        		<option value="First">Yoruba</option>
+	        		<option value="Second">Igbo</option>
+	        		<option value="Third">Hausa</option>
+	        		<option value="Another option">English</option></select>
+	        		<label for="name" class="field-label field-label-2"></label>
+	        	</p>
+	        	<textarea class="textarea-1" ></textarea>
+	        	<br><br>
+	        
+	      </div>
+	    </div>
+	  </div>
+		
+	</div>
+</section>
+<hr>
+
+<section id="section-4">
+	<div class="container-4">
+
+			<div class="box-1">
+				<div class="about-1"><h1 class="box-heading-3">Translating text to text</h1></div>
+					<br><br><br><div class="text-block-box-1">Paste your blog, Ads, Proposals, Blog, write-ups and our algorithm will translate into an African language.</div>
+				
+			</div>
+			<div class="box-2">
+				<div class="about-2"><h1 class="box-heading-3">Localize your online presence</h1></div>
+					<br><br><br><div class="text-block-box-2" >With our plug-in you can integrate into your CRM, collaboration tool and website to reach your audience in their local languages.</div>
+				
+			</div>
+			<div class="box-3">
+				<div class="about-3"><h1 class="box-heading-3">Whatsapp bot</h1></div>
+					<br><br><br><br><div class="text-block-box-3">With our chat integration you can communicate with your contact in their local language.</div>
+				
+			</div>
+		
+	</div>
+	
+</section>
+<hr>
+
+<section id="section-5">
+	<div class="container-5">
+	<div class="Testimonials">
+		<div class="text-block-3">
+			<h1><u>Testimonials</u></h1>
+		</div>
+		<div class="sub-con">
+			<div class="test-img">
+				<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash.jpg" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-500.jpg 500w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-800.jpg 800w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-2000.jpg 2000w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-2600.jpg 2600w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash.jpg 2848w" sizes="(max-width: 479px) 61vw, 125.99609375px" alt="" class="image-8" width="126">	
+			</div>
+			<div class="test-word">
+				<u><h3>I got my content translated with higher accuracy than the tools I used in the past and this has led to more engagement from customers.</h3>
+
+					<h4>Donald C. Micheal</h4></u>			
+		</div>
+		
+	</div>
+		
+	</div>
+</section>
+<hr>
+
+<section id="section-6">
+	<div class="container-6">
+		<div class="text-block-6" style="">
+		<u><h1>Our Sponsors</h1></u>
+	</div>
+	<div class="image">
+	<div class="img-5">
+		<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5ee94173c0bc80412459f_download%20(1).jpg" loading="lazy" alt="" class="image-7" >
+		
+	</div>
+	<div class="img-6">
+		<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5efe71d98f66c63109040_download%20(6).png" loading="lazy" alt="" >
+		
+	</div>
+	<div class="img-7">
+		<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5ee94173c0bc80412459f_download%20(1).jpg" loading="lazy" alt="" class="image-10" >
+		
+	</div>
+	</div>
+		<hr>
+	</div>
+</section>
+
+
+<section id="section-7">
+	<div class="container-7">
+		<a href="#" >API Documentation</a>
+		<a href="https://forms.gle/nm3L8cwHtwoKBFcx6">Get Quote</a>
+		<a href="#" class="active-link">Community</a>
+		<a href="#">Our Blog</a>
+		<a href="#" class="active-link">Join Tranvee</a>
+		<a href="#" class="active-link">FAQs</a>
+		<a href="#">Support</a>
+		<a href="#" class="active-link">Partnership</a>
+
+		
+	</div>
+</section>
+
+
+
+
+
+<!-- 
+
+<section id="section-home"> 
+<div class="page-body " >
+
+	<div class="container-home">
+		<div>
+			<h1 class="head-1 "><b>Translation of your<br>  content just got easier</b></h1>
+		</div>
+		<div class="text-block" style="">
+			<h5>Transvee gives you the power to engage better with your<br>  audience...</h5>
+		</div>
+	</div>
+	<div class="img-1">
+		<img style="max-width: 9cm;" src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102.png" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102-p-500.png 500w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102-p-800.png 800w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102-p-1080.png 1080w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5b91bfe4bdb94bf11cad0_transv%20102.png 1523w" sizes="(max-width: 479px) 300px, (max-width: 767px) 83vw, (max-width: 991px) 45vw, 450px" alt="" class="image image-4">
+	</div>
+	
+</div>
+</section>
+<hr style="border-width: 3px; border-color: #802065;">
+
+<div class="container-2">
+	<div class="container w-container"><h1 class="heading-2">Translate your content, scale your reach, engage more, gain traction.</h1></div>
+	<div class="container-4 w-container">
+		<a href="#section-1"><button type="button" class="btn btn-primary" style="width: 140px; height: 40px; border-radius: 20px; ">Get Started</button></a>
+		<a href="#section-2"><button type="button" class="btn btn-info" style="width: 150px; height: 40px; border-radius: 20px;">How It Works</button></a>
+	</div>
+	<div class="img-2">
+		<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a.jpg" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-500.jpg 500w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-800.jpg 800w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5cc078a8916ed66091d5b_cadbf02093dd8e7b4c9e74107ba7b27a.jpg 1920w" sizes="(max-width: 767px) 96vw, (max-width: 991px) 95vw, 940px" alt="" class="image-3">
+	</div>
+</div>
+<hr style="border-width: 3px; border-color: #802065;">
+<section id="section-1">
+<div class="container-3" ;>
+	<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Enter/View Text</h5>
+        <hr>
+        <p class="card-text" style="padding-left: 420px; ">
+        	<select id="Select-Language" name="Select-Language" data-name="Select Language" class="select-field w-select">
+        		<option value="First">Yoruba</option>
+        		<option value="Second">Igbo</option>
+        		<option value="Third">Hausa</option>
+        		<option value="Another option">English</option>
+        	</select>
+        		<label for="Select-Language" class="field-label"></label>
+        	</p>
+        	<textarea class="textarea-1" style="padding-right: 7cm; padding-bottom: 5cm;"></textarea>
+        	<br><br>
+        	<a href="{% url 'login' %}" class="btn btn-primary">Try It</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Enter/View Text</h5>
+        <hr>
+        <p class="card-text" style="padding-left: 420px;">
+        	<select id="Select-Language-2" name="Select-Language-2" data-name="Select Language 2" class="select-field w-select">
+        		<option value="First">Yoruba</option>
+        		<option value="Second">Igbo</option>
+        		<option value="Third">Hausa</option>
+        		<option value="Another option">English</option></select>
+        		<label for="name" class="field-label field-label-2"></label>
+        	</p>
+        	<textarea class="textarea-1" style="padding-right: 7cm; padding-bottom: 5cm;"></textarea>
+        	<br><br>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<hr style="border-width: 3px; border-color: #802065;">
+
+<div class="container-5" id="section-2">
+	<div class="box-1">
+		<div class="box-2">
+			<div class="container-6 w-container"><h1 class="heading-3" style="font-size: 30px;">Translating text to text</h1></div>
+				<br><br><br><div class="text-block-2">Paste your blog, Ads, Proposals, Blog, write-ups and our algorithm will translate into an African language.</div>
+			
+		</div>
+		<div class="box-3">
+			<div class="container-7 w-container"><h1 class="heading-3" style="font-size: 30px;">Localize your online presence</h1></div>
+				<br><br><br><div class="text-block-2" >With our plug-in you can integrate into your CRM, collaboration tool and website to reach your audience in their local languages.</div>
+			
+		</div>
+		<div class="box-4">
+			<div class="container-8 w-container"><h1 class="heading-3" style="font-size: 30px;">Whatsapp bot</h1></div>
+				<br><br><br><br><div class="text-block-2">With our chat integration you can communicate with your contact in their local language.</div>
+			
+		</div>
+		
+	</div>
+</div>
+<hr style="border-width: 3px; border-color: #802065;">
+<div class="container-9">
+	<div class="Testimonials">
+		<div class="text-block-3">
+			<h1><u>Testimonials</u></h1>
+		</div>
+		<div class="container-10">
+			<div class="text-block-4">
+				<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash.jpg" loading="lazy" srcset="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-500.jpg 500w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-800.jpg 800w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-1080.jpg 1080w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-1600.jpg 1600w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-2000.jpg 2000w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash-p-2600.jpg 2600w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5f64a1701304857bf4f04_tyler-nix-PQeoQdkU9jQ-unsplash.jpg 2848w" sizes="(max-width: 479px) 61vw, 125.99609375px" alt="" class="image-8" width="126">	
+			</div>
+			<div class="text-block-5">
+				<u><h3 class="paragraph" style="font-size: 20px;">I got my content translated with higher accuracy than the tools I used in the past and this has led to more engagement from customers.</h3></u>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</div>
+<hr style="border-width: 3px; border-color: #802065;">
+<div class="container-11">
+	<div class="text-block-6" style="">
+		<u><h1>Our Sponsors</h1></u>
+	</div>
+	<div class="image">
+	<div class="img-5">
+		<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5ee94173c0bc80412459f_download%20(1).jpg" loading="lazy" alt="" class="image-7" >
+		
+	</div>
+	<div class="img-6">
+		<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5efe71d98f66c63109040_download%20(6).png" loading="lazy" alt="" >
+		
+	</div>
+	<div class="img-7">
+		<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5ee94173c0bc80412459f_download%20(1).jpg" loading="lazy" alt="" class="image-10" >
+		
+	</div>
+	</div>
+	<hr style="border-width: 3px; border-color: #802065;">
+	<div class="container-12">
+		<div class="container-13">
+			<div class="head-2" >
+				<h1 style="font-weight: 1000; font-size: 50px; font-family: sans-serif ;">We will expose you to the world</h1>
+			</div>
+			<div class="text-block-7">
+				<p>With our plug-in we ensure your content reach every corner of the world. We remove every hurdle on your way to acquire new customers.</p>
+			</div>
+			
+		</div>
+		<div class="img-11">
+			<img src="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5fd0b3158a9b5e4a45887_Group%201.png" loading="laz0y" srcset="https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5fd0b3158a9b5e4a45887_Group%201-p-500.png 500w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5fd0b3158a9b5e4a45887_Group%201-p-800.png 800w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5fd0b3158a9b5e4a45887_Group%201-p-1080.png 1080w, https://uploads-ssl.webflow.com/62d5b7016a6dd7dd19e4c0ed/62d5fd0b3158a9b5e4a45887_Group%201.png 1245w" sizes="(max-width: 479px) 86vw, (max-width: 767px) 88vw, (max-width: 1270px) 98vw, 1245px" alt="" class="image-9">
+		</div>
+	</div>
+	<hr style="border-width: 3px; border-color: #802065;">
+	<div class="container-14" style="margin-left: -6px;">
+		<a href="#" style="font-weight: 500; font-size: 18px; color: floralwhite;">API Documentation</a>
+		<a href="https://forms.gle/nm3L8cwHtwoKBFcx6" style="font-weight: 500; font-size: 18px; color: floralwhite;">Get Quote</a>
+		<a href="#" style="font-weight: 500; font-size: 18px; color: floralwhite;">Community</a>
+		<a href="#" style="font-weight: 500; font-size: 18px; color: floralwhite;">Our Blog</a>
+		<a href="#" style="font-weight: 500; font-size: 18px; color: floralwhite;">Join Tranvee</a>
+		<a href="#" style="font-weight: 500; font-size: 18px; color: floralwhite;">FAQs</a>
+		<a href="#" style="font-weight: 500; font-size: 18px; color: floralwhite;">Support</a>
+		<a href="" style="font-weight: 500; font-size: 18px; color: floralwhite;">Partnership</a>
+	</div>
+	
+</div> -->
+
+{% endblock%}
+
+

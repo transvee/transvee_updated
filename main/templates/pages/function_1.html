@@ -1,0 +1,79 @@
+{% extends 'pages/dash.html'%}
+{% load static%}
+
+
+{% block content%}
+
+  {% block style%}
+  <link rel="stylesheet" type="text/css" href="{% static 'index_2.css'%}">
+  {% endblock %}
+
+<div class="tran-home">
+	
+	<!-- <div class="search-con" >
+		<input type="text" name="search" >
+		<button class="btn-search">Search</button>
+	</div> -->
+	<div class="trans-1">
+
+		<form  action="function_1" method="get">
+
+		
+			<div class="text-add">
+				<h3> Translate To:</h3>
+			<p class="dropdown-1" >
+
+        	<select name="language" class="select-field w-select">
+        		<option value='yo'>Yoruba</option>
+        		<option value='ha'>Hausa</option>
+        		<option value="ig">Igbo</option>
+        		<option value="en">English</option>
+        		<option value="sw">Swahili</option>
+        		<option value="fr">French</option>
+        		<option value="pt">Portuguese</option>
+        		<option value="ar">Arabic</option>
+        	</select>
+        		</p>
+        	</div>
+
+        	<div>
+        		<!-- <p>Body</p> -->
+        		<textarea rows="10" cols="55" class="textarea-1" placeholder="Type Here" name="texting" >{{ stt }}</textarea>	
+        	</div>   
+        	<div class="btn-trans" >
+        		<button class="btn-tra" type="submit" value="Submit">Translate</button> 
+        	</div> 
+		</form>
+	</div>
+		
+	<div class="trans-2">
+		<form action=""  method=GET>
+
+			{% csrf_token %}
+			
+			<div class="container-3">
+				<div class="text-add">	
+					<h3> Translated To:</h3>
+					<p class="dropdown-2" >
+			        	<select name="language-1"  class="select-field w-select">
+			        		<option value="">{{tl}}</option>	
+			        	</select>
+		        	</p>
+
+	        	</div>
+
+	        
+
+	        	<div>
+	        		<!-- <p>Body</p> -->
+	        		<br>
+	        		<textarea rows="10" cols="55" class="textarea-2" name="text-1"> {{ tt }}</textarea>	
+	        	</div> 
+			</div>	
+		</form>	
+	</div>
+</div>
+
+		
+
+{% endblock%}
